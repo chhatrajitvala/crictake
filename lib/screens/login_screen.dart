@@ -19,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
     setState(() => isLoading = true);
 
     final response = await http.post(
-      Uri.parse('https://crictake-backend.onrender.com/login'),
+      Uri.parse('https://crictake-backend.onrender.com/api/auth/login'),
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({
         'email': emailController.text,
